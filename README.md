@@ -5,6 +5,8 @@ There were two C++ deliverables for this coursework:
 	2	Develop a test suite for our MIPS simulator
 The aims were, to solidify our understanding of how an instruction processor actually functions. Understand the importance of having good specifications, in terms of functionality, APIs, and requirements and skills in coding from scratch.
 
+Module: Computer Architecture run by Professor David Thomas at EEE department, Imperial College London 2016
+
 Martin Ferianc | MEng. Electronic and Information Engineering at Imperial College London (2nd year)
 E: ferianc.martin@gmail.com
 W: www.ferianc.eu
