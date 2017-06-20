@@ -18,7 +18,7 @@ make test
 ### Currently implemented features
 
 | Instruction |  tests | passed | success |
-+-------------+--------+--------+---------+
+|-------------|--------|--------|---------|
 |         ADD |      5 |      5 |  100.0% |
 |        ADDI |      3 |      3 |  100.0% |
 |       ADDIU |      1 |      1 |  100.0% |
