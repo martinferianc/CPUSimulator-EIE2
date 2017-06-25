@@ -7,7 +7,7 @@ The simulator is built:
 ````
 make simulator
 ````
-and the resulting program is in `bin/c_compiler`.
+and the resulting program is in `bin/test_mips`.
 
 Example run and test after building:
 
