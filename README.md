@@ -1,74 +1,83 @@
-# MIPS1-EIE2
+# MIPS CPU Simulator
+This is [MIPSI](https://en.wikipedia.org/wiki/MIPS_architecture) CPU simulator and testing library.
+The simulator is almost a complete MIPS I CPU: all but floating-point and coprocessor instructions have been implemented. Exceptions were implemented using predefined exception return codes.
 
-This is repo containing the attempt to build a MIPS1 ISA Siumulator in C++
+## Specification
+This piece of work was done in partial fulfilment of an advanced computer architecture course. The specification for the coursework can be found [here](https://github.com/m8pple/arch2-2016-cw).
 
+## Currently implemented features and tests
+
+| Instruction |  tests | passed |
+|-------------|--------|--------|
+|         ADD |      5 |      5 |
+|        ADDI |      3 |      3 |
+|       ADDIU |      1 |      1 |
+|        ADDU |     42 |     42 |
+|         AND |      1 |      1 |
+|        ANDI |      2 |      2 |
+|         BEQ |      2 |      2 |
+|        BGEZ |      3 |      3 |
+|      BGEZAL |      3 |      3 |
+|        BGTZ |      2 |      2 |
+|        BLEZ |      3 |      3 |
+|        BLTZ |      3 |      3 |
+|      BLTZAL |      2 |      2 |
+|         BNE |      2 |      2 |
+|         DIV |      3 |      3 |
+|        DIVU |      1 |      1 |
+|           J |      1 |      1 |
+|         JAL |      1 |      1 |
+|        JALR |      1 |      1 |
+|          JR |      1 |      1 |
+|          LB |      2 |      2 |
+|         LBU |      2 |      2 |
+|          LH |      3 |      3 |
+|         LHU |      2 |      2 |
+|         LUI |      2 |      2 |
+|          LW |      1 |      1 |
+|         LWL |      2 |      2 |
+|         LWR |      2 |      2 |
+|        MFHI |      9 |      9 |
+|        MFLO |      9 |      9 |
+|        MTHI |      1 |      1 |
+|        MTLO |      1 |      1 |
+|        MULT |      1 |      1 |
+|       MULTU |      3 |      3 |
+|          OR |      2 |      2 |
+|         ORI |      2 |      2 |
+|          SB |      2 |      2 |
+|          SH |      5 |      5 |
+|         SLL |      2 |      2 |
+|        SLLV |      1 |      1 |
+|         SLT |      4 |      4 |
+|        SLTI |      3 |      3 |
+|       SLTIU |      4 |      4 |
+|        SLTU |      2 |      2 |
+|         SRA |      3 |      3 |
+|        SRAV |      4 |      4 |
+|         SRL |      2 |      2 |
+|        SRLV |      2 |      2 |
+|         SUB |      2 |      2 |
+|        SUBU |      3 |      3 |
+|          SW |      7 |      7 |
+|         XOR |      3 |      3 |
+|        XORI |      3 |      3 |
+
+## Building and Running
 The simulator is built:
-
-````
+```
 make simulator
-````
+```
 and the resulting program is in `bin/test_mips`.
 
-Example run and test after building:
+Example build and then test:
 
-````
+```
 make test
-````
+```
 
-### Currently implemented features
+## Credits
+- The code in [fragments](/fragments) was provided by the course lecturer, [David Thomas](https://github.com/m8pple), for use of automatic marking, and so is not my own.
+- The header files in [include](/include) were also provided by [David Thomas](https://github.com/m8pple), these define the API for automatic marking and testing.
+- All other code was written by Martin Ferianc in 2016.
 
-| Instruction |  tests | passed | success |
-|-------------|--------|--------|---------|
-|         ADD |      5 |      5 |  100.0% |
-|        ADDI |      3 |      3 |  100.0% |
-|       ADDIU |      1 |      1 |  100.0% |
-|        ADDU |     42 |     42 |  100.0% |
-|         AND |      1 |      1 |  100.0% |
-|        ANDI |      2 |      2 |  100.0% |
-|         BEQ |      2 |      2 |  100.0% |
-|        BGEZ |      3 |      3 |  100.0% |
-|      BGEZAL |      3 |      3 |  100.0% |
-|        BGTZ |      2 |      2 |  100.0% |
-|        BLEZ |      3 |      3 |  100.0% |
-|        BLTZ |      3 |      3 |  100.0% |
-|      BLTZAL |      2 |      2 |  100.0% |
-|         BNE |      2 |      2 |  100.0% |
-|         DIV |      3 |      3 |  100.0% |
-|        DIVU |      1 |      1 |  100.0% |
-|           J |      1 |      1 |  100.0% |
-|         JAL |      1 |      1 |  100.0% |
-|        JALR |      1 |      1 |  100.0% |
-|          JR |      1 |      1 |  100.0% |
-|          LB |      2 |      2 |  100.0% |
-|         LBU |      2 |      2 |  100.0% |
-|          LH |      3 |      3 |  100.0% |
-|         LHU |      2 |      2 |  100.0% |
-|         LUI |      2 |      2 |  100.0% |
-|          LW |      1 |      1 |  100.0% |
-|         LWL |      2 |      2 |  100.0% |
-|         LWR |      2 |      2 |  100.0% |
-|        MFHI |      9 |      9 |  100.0% |
-|        MFLO |      9 |      9 |  100.0% |
-|        MTHI |      1 |      1 |  100.0% |
-|        MTLO |      1 |      1 |  100.0% |
-|        MULT |      1 |      1 |  100.0% |
-|       MULTU |      3 |      3 |  100.0% |
-|          OR |      2 |      2 |  100.0% |
-|         ORI |      2 |      2 |  100.0% |
-|          SB |      2 |      2 |  100.0% |
-|          SH |      5 |      5 |  100.0% |
-|         SLL |      2 |      2 |  100.0% |
-|        SLLV |      1 |      1 |  100.0% |
-|         SLT |      4 |      4 |  100.0% |
-|        SLTI |      3 |      3 |  100.0% |
-|       SLTIU |      4 |      4 |  100.0% |
-|        SLTU |      2 |      2 |  100.0% |
-|         SRA |      3 |      3 |  100.0% |
-|        SRAV |      4 |      4 |  100.0% |
-|         SRL |      2 |      2 |  100.0% |
-|        SRLV |      2 |      2 |  100.0% |
-|         SUB |      2 |      2 |  100.0% |
-|        SUBU |      3 |      3 |  100.0% |
-|          SW |      7 |      7 |  100.0% |
-|         XOR |      3 |      3 |  100.0% |
-|        XORI |      3 |      3 |  100.0% |
