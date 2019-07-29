@@ -1,9 +1,9 @@
-# MIPS CPU Simulator
-This is [MIPSI](https://en.wikipedia.org/wiki/MIPS_architecture) CPU simulator and testing library.
+# MIPS I CPU Simulator
+This is [MIPS I](https://en.wikipedia.org/wiki/MIPS_architecture) CPU simulator and a testing library.
 The simulator is almost a complete MIPS I CPU: all but floating-point and coprocessor instructions have been implemented. Exceptions were implemented using predefined exception return codes.
 
 ## Specification
-This piece of work was done in partial fulfilment of an advanced computer architecture course. The specification for the coursework can be found [here](https://github.com/m8pple/arch2-2016-cw).
+This piece of work was done in partial fulfilment of an advanced computer architecture course (EE2-13). The specification for the coursework can be found [here](https://github.com/m8pple/arch2-2016-cw).
 
 ## Currently implemented features and tests
 
@@ -77,7 +77,7 @@ make test
 ```
 
 ## Credits
-- The code in [fragments](/fragments) was provided by the course lecturer, [David Thomas](https://github.com/m8pple), for use of automatic marking, and so is not my own.
+- The code in [fragments](/fragments) was provided by the course lecturer, [David Thomas](https://github.com/m8pple), for use of automatic marking, and so it is not my own.
 - The header files in [include](/include) were also provided by [David Thomas](https://github.com/m8pple), these define the API for automatic marking and testing.
 - All other code was written by Martin Ferianc in 2016.
 
